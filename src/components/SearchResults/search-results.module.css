@@ -1,0 +1,11 @@
+@layer components {
+  .container {
+    --container-border-color: 226, 232, 240;
+
+    border: 1px solid rgb(var(--container-border-color));
+    border-radius: 0.375rem;
+    box-shadow: 0 0 0 3px rgb(241, 245, 249);
+    margin: 0;
+    padding: 0;
+  }
+}

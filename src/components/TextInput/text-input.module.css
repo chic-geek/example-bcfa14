@@ -1,0 +1,23 @@
+@layer components {
+
+  .label {
+    display: block;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+  }
+
+  .input {
+    --textinput-border-color: 255, 255, 255;
+    --textinput-focus-color: 59, 130, 246;
+
+    border: 2px solid rgb(var(--textinput-border-color) / 1);
+    color: rgb(71, 85, 105);
+    border-radius: 0.25rem;
+    display: block;
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 0.625rem 0.875rem;
+    width: 100%;
+  }
+}

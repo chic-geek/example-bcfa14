@@ -1,0 +1,16 @@
+@layer components {
+  .container {
+    background-color: rgb(23, 37, 84);
+    color: rgb(255, 255, 255);
+    padding: 2rem 2.5rem;
+    width: 100%;
+  }
+
+  @media screen and (min-width: 700px) {
+    .container {
+      flex-shrink: 0;
+      height: 100%;
+      width: 425px;
+    }
+  }
+}

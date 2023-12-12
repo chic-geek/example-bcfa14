@@ -1,0 +1,126 @@
+@layer reset, base, components, utilities;
+@import url("modern-normalize/modern-normalize.css") layer(reset);
+
+@layer base {
+  :root {
+    --focus-color: 250, 204, 21;
+    --highlight-color: 37, 99, 235;
+
+    background-color: #ffffff;
+    font-family: 'Inter', system-ui, Helvetica, Arial, sans-serif;
+    font-weight: 400;
+    font-synthesis: none;
+    line-height: 1.5;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  html,
+  body,
+  #root {
+    height: 100%;
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-weight: 800;
+    line-height: 1.25;
+    margin-top: 0;
+  }
+}
+
+@layer components {
+  .app-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+  }
+
+  @media screen and (min-width: 700px) {
+    .app-container {
+      flex-direction: row;
+    }
+
+  }
+
+  .app-sidebar {
+    background-color: rgb(23, 31, 43);
+    padding: 1.5rem 2rem;
+    width: 100%;
+  }
+
+  @media screen and (min-width: 700px) {
+    .app-sidebar {
+      flex-shrink: 0;
+      height: 100%;
+      width: 375px;
+    }
+  }
+
+  .app-content {
+    height: 100%;
+    max-width: 100%;
+    overflow: hidden;
+    position: relative;
+  }
+}
+
+@layer utilities {
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  .flex {
+    display: flex;
+  }
+
+  .flex-col {
+    flex-direction: column;
+  }
+
+  .flex-gap-tight {
+    gap: 0.35rem;
+  }
+
+  .flex-gap-1 {
+    gap: 1rem;
+  }
+
+  .flex-align-center {
+    align-items: center;
+  }
+
+  .m-0 {
+    margin: 0;
+  }
+
+  .mb-1 {
+    margin-bottom: 1rem;
+  }
+
+  .p-0 {
+    padding: 0;
+  }
+
+  .animate {
+    animation: spin 750ms cubic-bezier(.14, .78, .36, 1) infinite;
+  }
+}

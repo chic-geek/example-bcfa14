@@ -1,0 +1,10 @@
+@layer components {
+  .container {
+    --status-message-color: 71, 85, 105;
+
+    color: rgb(var(--status-message-color));
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-align: center;
+  }
+}

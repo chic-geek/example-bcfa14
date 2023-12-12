@@ -1,0 +1,12 @@
+@layer components {
+  .container {
+    align-items: center;
+    background-color: rgb(203, 213, 225);
+    border-radius: 1rem;
+    cursor: pointer;
+    display: inline-flex;
+    font-size: 0.725rem;
+    justify-content: center;
+    padding: 0.2rem 0.5rem;
+  }
+}

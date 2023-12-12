@@ -1,0 +1,54 @@
+@layer components {
+  @keyframes slideIn {
+    from {
+      transform: translateX(100%);
+    }
+  }
+
+  .wrapper {
+    inset: 0;
+    padding: 1rem;
+    position: fixed;
+  }
+
+  .backdrop {
+    background-color: rgb(2, 6, 23, 0.65);
+    backdrop-filter: blur(3px);
+    inset: 0;
+    position: absolute;
+  }
+
+  .drawer {
+    animation: slideIn 500ms cubic-bezier(.14, .78, .36, 1);
+    background: white;
+    border-radius: 0.8rem;
+    bottom: 1.5rem;
+    box-shadow: 0 0 10px 1px rgb(2, 6, 23, 0.3);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-width: 200px;
+    max-width: 450px;
+    padding: 32px;
+    position: absolute;
+    right: 1.5rem;
+    top: 1.5rem;
+    width: 50%;
+  }
+
+  @media screen and (max-width: 568px) {
+    .drawer {
+      border-radius: 0;
+      bottom: 0;
+      max-width: 100%;
+      min-width: 100%;
+      right: 0;
+      top: 0;
+      width: 100%;
+    }
+  }
+
+  .heading {
+    color: rgb(var(--highlight-color));
+  }
+}
